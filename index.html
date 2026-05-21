@@ -53,7 +53,6 @@
                         <p class="text-[9px] font-bold text-slate-400 uppercase leading-none">Akses Operator</p>
                         <p class="text-xs font-bold text-slate-800 mt-1">Administrator</p>
                     </div>
-                    <!-- Avatar Admin minimalis dengan warna secondary khas ULBI -->
                     <div class="w-9 h-9 rounded-full bg-orange-50 text-[#ea5329] border border-orange-100 flex items-center justify-center font-bold">
                         <i class="fa-solid fa-user-shield text-sm"></i>
                     </div>
@@ -61,19 +60,13 @@
             </div>
         </div>
     </header>
-
-    <!-- MAIN DASHBOARD WRAPPER -->
     <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow space-y-6">
-        
-        <!-- JUMBOTRON BRANDING (Warna Clean White dengan aksen Orange SIAKAD) -->
         <div class="bg-white border-l-8 border-[#ea5329] rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/80 relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
                 <span class="bg-orange-50 text-[#ea5329] text-[10px] font-extrabold px-3 py-1 rounded-md uppercase tracking-wider border border-orange-100">Sistem Presensi Keaktifan</span>
                 <h2 class="text-xl sm:text-2xl font-extrabold text-[#00277f] tracking-tight mt-2.5">Sistem Absensi & Rekap Mahasiswa</h2>
-                <p class="text-xs text-slate-500 mt-1 max-w-xl">Portal pencatatan presensi perkuliahan mahasiswa Informatika semester 4 secara terpadu di lingkungan kampus ULBI.</p>
+                <p class="text-xs text-slate-500 mt-1 max-w-xl">Portal pencatatan presensi perkuliahan mahasiswa Informatika secara terpadu di lingkungan kampus ULBI.</p>
             </div>
-            
-            <!-- Tab Selector Buttons (Gaya Tombol Clean Gray/White) -->
             <div class="flex flex-wrap gap-1.5 bg-slate-100 p-1.5 rounded-xl border border-slate-200/60 w-full md:w-auto">
                 <button id="tab-dashboard-btn" onclick="switchTab('dashboard')" class="flex-1 md:flex-none px-4 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-[#00277f] text-white shadow-sm">
                     <i class="fa-solid fa-chart-line"></i> Dashboard
@@ -86,12 +79,8 @@
                 </button>
             </div>
         </div>
-
-        <!-- ======================= TAB 1: DASHBOARD ======================= -->
         <div id="tab-dashboard" class="space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                
-                <!-- KOLOM KIRI: FORM INPUT ABSENSI (CREATE) -->
                 <div class="lg:col-span-4 bg-white rounded-xl p-6 shadow-sm border border-slate-100 h-fit">
                     <div class="flex items-center gap-2 mb-5 border-b border-slate-100 pb-3">
                         <div class="w-8 h-8 rounded-lg bg-orange-50 text-[#ea5329] flex items-center justify-center">
@@ -101,7 +90,6 @@
                     </div>
 
                     <form id="form-absensi" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                        <!-- Pilih Mahasiswa -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Pilih Mahasiswa</label>
                             <div class="relative">
@@ -118,8 +106,6 @@
                                 </select>
                             </div>
                         </div>
-
-                        <!-- Pilih Mata Kuliah -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Pilih Mata Kuliah</label>
                             <div class="relative">
@@ -134,8 +120,6 @@
                                 </select>
                             </div>
                         </div>
-
-                        <!-- Tanggal Absensi -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Tanggal Absensi</label>
                             <div class="relative">
@@ -145,8 +129,6 @@
                                 <input type="date" id="form-tanggal" class="w-full pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-slate-700 focus:ring-2 focus:ring-orange-500/15 focus:border-[#ea5329] outline-none transition text-xs font-semibold" required>
                             </div>
                         </div>
-
-                        <!-- Status Kehadiran -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Status Kehadiran</label>
                             <div class="grid grid-cols-3 gap-2">
@@ -167,15 +149,11 @@
                                 </label>
                             </div>
                         </div>
-
-                        <!-- Submit Button -->
                         <button type="submit" class="w-full bg-[#ea5329] hover:bg-[#d4431b] text-white font-bold py-2.5 px-4 rounded-lg transition shadow-md shadow-orange-500/10 flex items-center justify-center gap-2 mt-4 text-xs sm:text-sm">
                             <i class="fa-solid fa-right-to-bracket"></i> Kirim Absensi
                         </button>
                     </form>
                 </div>
-
-                <!-- STATISTIK & DETAILED REKAP TABLE (READ) -->
                 <div class="lg:col-span-8 space-y-6">
                     <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-100 pb-4 mb-4">
@@ -193,7 +171,6 @@
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                            <!-- Metrics Count -->
                             <div class="md:col-span-7 grid grid-cols-2 gap-4">
                                 <div class="bg-slate-50 rounded-xl p-4 flex flex-col justify-center border border-slate-100">
                                     <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider block">Total Sesi</span>
@@ -213,7 +190,6 @@
                                 </div>
                             </div>
 
-                            <!-- Progress Circle Gauge -->
                             <div class="md:col-span-5 flex flex-col items-center justify-center py-2">
                                 <div class="relative w-36 h-36 flex items-center justify-center">
                                     <svg class="absolute w-full h-full transform -rotate-90">
@@ -230,7 +206,6 @@
                         </div>
                     </div>
 
-                    <!-- DETAILED REKAP TABLE PER MATKUL -->
                     <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 space-y-4">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                             <div class="flex items-center gap-2">
@@ -239,7 +214,6 @@
                                 </div>
                                 <h3 class="font-extrabold text-[#00277f] text-sm">Tabel Rekap Kehadiran per Mata Kuliah</h3>
                             </div>
-                            <!-- Flex Container Aksi PDF & Reset Simulasi -->
                             <div class="flex items-center gap-2">
                                 <button onclick="resetSimulationData()" class="px-3 py-2 border border-rose-100 rounded-lg hover:bg-rose-50 text-xs font-bold text-rose-600 transition flex items-center gap-1.5" title="Reset semua data ke data demo bawaan">
                                     <i class="fa-solid fa-rotate-left"></i> Reset Demo Data
@@ -263,7 +237,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="dashboard-rekap-rows" class="divide-y divide-slate-100 text-xs sm:text-sm font-semibold text-slate-600">
-                                    <!-- Diisi oleh Javascript -->
                                 </tbody>
                             </table>
                         </div>
@@ -272,7 +245,6 @@
             </div>
         </div>
 
-        <!-- ======================= TAB 2: ABSEN HARI INI (UPDATE & DELETE) ======================= -->
         <div id="tab-hariini" class="hidden space-y-6">
             <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 space-y-4">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-100 pb-4">
@@ -302,14 +274,12 @@
                             </tr>
                         </thead>
                         <tbody id="hariini-rows" class="divide-y divide-slate-100 text-sm font-semibold text-slate-600">
-                            <!-- Diisi oleh Javascript -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
 
-        <!-- ======================= TAB 3: REKAP KELAS PER MATKUL ======================= -->
         <div id="tab-kelas" class="hidden space-y-6">
             <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 space-y-4">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-100 pb-4">
@@ -347,7 +317,6 @@
                             </tr>
                         </thead>
                         <tbody id="kelas-rekap-rows" class="divide-y divide-slate-100 text-sm font-semibold text-slate-600">
-                            <!-- Diisi oleh Javascript -->
                         </tbody>
                     </table>
                 </div>
@@ -356,7 +325,6 @@
 
     </main>
 
-    <!-- FOOTER INFO KULIAH -->
     <footer class="bg-white border-t border-slate-200 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-bold text-slate-400">
             <div>
@@ -368,7 +336,6 @@
         </div>
     </footer>
 
-    <!-- MODAL CONFIG LIVE API -->
     <div id="config-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl border border-slate-100 space-y-4 relative transform transition">
             <button onclick="toggleConfigModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition">
@@ -417,7 +384,6 @@
         </div>
     </div>
 
-    <!-- SYSTEM ENGINE & CRUD CONTROLLER -->
     <script>
         const INITIAL_STUDENTS = {
             "714240001": { nama: "Zahra Nurazijah Lutfiani" },
@@ -435,7 +401,6 @@
             "IF404": "Analisis & Perancangan Sistem"
         };
 
-        // MEMBUAT STRING TANGGAL SESUAI TIMEZONE LOKAL (BUKAN UTC)
         function getLocalTodayString() {
             const now = new Date();
             const year = now.getFullYear();
@@ -444,11 +409,9 @@
             return `${year}-${month}-${day}`;
         }
 
-        // Membangun array data demo secara dinamis mengikuti zona waktu laptop kamu
         function generateDemoAttendances() {
             const todayStr = getLocalTodayString();
             return [
-                // Log Absensi Hari ini (Otomatis langsung muncul di tab "Log Hari Ini"!)
                 { id: "log-1", npm: "714240001", matkulCode: "IF401", tanggal: todayStr, status: "Hadir", timestamp: "08:15" },
                 { id: "log-2", npm: "714240001", matkulCode: "IF402", tanggal: todayStr, status: "Izin", timestamp: "09:30" },
                 { id: "log-3", npm: "714240002", matkulCode: "IF401", tanggal: todayStr, status: "Hadir", timestamp: "08:20" },
@@ -457,7 +420,6 @@
                 { id: "log-6", npm: "714240005", matkulCode: "IF401", tanggal: todayStr, status: "Hadir", timestamp: "08:10" },
                 { id: "log-7", npm: "714240006", matkulCode: "IF404", tanggal: todayStr, status: "Hadir", timestamp: "09:05" },
                 
-                // Log Absensi Historis beberapa hari lalu
                 { id: "log-hist-1", npm: "714240001", matkulCode: "IF401", tanggal: "2026-05-18", status: "Hadir", timestamp: "08:05" },
                 { id: "log-hist-2", npm: "714240001", matkulCode: "IF403", tanggal: "2026-05-15", status: "Hadir", timestamp: "10:10" },
                 { id: "log-hist-3", npm: "714240002", matkulCode: "IF402", tanggal: "2026-05-18", status: "Alpha", timestamp: "09:45" }
@@ -472,12 +434,11 @@
         };
 
         document.addEventListener("DOMContentLoaded", () => {
-            // Set input tanggal form bawaan ke hari ini
             document.getElementById("form-tanggal").value = getLocalTodayString();
             
             loadSavedConfig();
             loadAttendanceData();
-            renderActiveTab(); // Panggil renderActiveTab agar tab default ter-render sempurna
+            renderActiveTab();
             updateApiStatusBadge();
         });
 
@@ -505,7 +466,6 @@
             }, 3000);
         }
 
-        // TAB NAVIGATION
         function switchTab(tabId) {
             state.activeTab = tabId;
             
@@ -587,7 +547,6 @@
             }
         }
 
-        // FUNGSI LOAD DATA DENGAN GRACEFUL OFFLINE FALLBACK
         function loadAttendanceData() {
             if (state.config.mode === "live") {
                 showToast("Menghubungkan ke API Backend Live...", "info");
@@ -597,7 +556,6 @@
             }
         }
 
-        // FUNGSI MANDIRI MEMBACA LOCAL STORAGE
         function loadLocalDatabase() {
             const localData = localStorage.getItem("absensi_mod6_db");
             if (localData && JSON.parse(localData).length > 0) {
@@ -609,7 +567,6 @@
             }
         }
 
-        // FUNGSI UNTUK RESET DATA SIMULASI (Sangat membantu presentasi dosen)
         function resetSimulationData() {
             if (confirm("Apakah anda yakin ingin mengosongkan perubahan lokal dan mereset ke data demo bawaan kampus?")) {
                 localStorage.removeItem("absensi_mod6_db");
@@ -630,7 +587,6 @@
             renderDashboardData();
         }
 
-        // TAB 1: DASHBOARD
         function renderDashboardData() {
             const currentNpm = state.selectedNpm;
             const currentStudent = INITIAL_STUDENTS[currentNpm];
@@ -705,7 +661,6 @@
             });
         }
 
-        // TAB 2: ABSEN HARI INI
         function renderHariIniData() {
             const todayStr = getLocalTodayString();
             const listBody = document.getElementById("hariini-rows");
@@ -771,7 +726,6 @@
             });
         }
 
-        // TAB 3: REKAP KELAS PER MATKUL
         function renderRekapKelas() {
             const filterCode = document.getElementById("kelas-matkul-filter").value;
             const tableBody = document.getElementById("kelas-rekap-rows");
@@ -822,7 +776,6 @@
             });
         }
 
-        // CREATE: POST /absensi (Dengan local fallback instan jika server offline)
         function handleFormSubmit(event) {
             event.preventDefault();
 
@@ -861,7 +814,6 @@
                 })
                 .catch(err => { 
                     showToast("Koneksi gagal! Menyimpan data secara lokal.", "error"); 
-                    // Fallback simpan lokal secara aman saat offline
                     state.attendances.unshift(newAbsen);
                     saveToLocalDb();
                     renderActiveTab();
@@ -874,7 +826,6 @@
             }
         }
 
-        // UPDATE: PUT /absensi/:id
         function updateAttendanceStatus(logId, newStatus) {
             const index = state.attendances.findIndex(l => l.id === logId);
             if (index === -1) return;
@@ -906,7 +857,6 @@
             }
         }
 
-        // DELETE: DELETE /absensi/:id
         function deleteAttendance(logId) {
             if (!confirm("Apakah Anda yakin ingin membatalkan & menghapus log kehadiran ini?")) return;
 
@@ -941,7 +891,6 @@
             }
         }
 
-        // FALLBACK PENUH PADA SINKRONISASI LIVE YANG EROR
         function fetchLiveAttendances() {
             if (!state.config.apiUrl) return;
             fetch(`${state.config.apiUrl}/absensi/${state.selectedNpm}`, {
