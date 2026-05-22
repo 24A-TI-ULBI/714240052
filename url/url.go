@@ -14,6 +14,9 @@ func Web(app *fiber.App) {
 	app.Get("/", controller.Homepage)
 	app.Get("/ip", controller.IPServer)
 
+	// Route Modul Absensi
+	AbsensiRoute(app)
+
 	// Tambahkan route modul di bawah ini setelah PR di-merge
 	// Contoh: MahasiswaRoute(app)
 }
